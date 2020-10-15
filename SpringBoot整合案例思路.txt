@@ -1,0 +1,6 @@
+SpringBoot整合案例思路
+SpringBoot集成MyBatis,redis,Dubbo,Thymeleaf
+1.Dubbo分布式框架要求至少是三个工程:接口工程,服务提供者,服务消费者
+2.接口工程:实体bean和业务接口
+3.服务提供者:集成MyBatis,它也是实现了业务的接口,该工程只用到了Spring,MyBatis,Redis
+4.服务消费者:集成Thymeleaf,它使用了SpringMVC,spring

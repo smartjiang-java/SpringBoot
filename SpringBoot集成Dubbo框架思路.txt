@@ -1,0 +1,15 @@
+dubbo官方推荐至少需要3个工程
+1.接口工程:存放实体类和业务接口
+	maven java工程
+2.服务提供者:接口的实现类,该工程集成MyBatis和Spring
+	MyBatis依赖,MyBatis集成Spring依赖,MySQL驱动,Spring相关依赖,Dubbo依赖,
+	注册中心zookeeper依赖,Spring集成redis依赖
+	1.添加依赖
+	2.配置核心配置文件(数据库配置,redis配置,dubbo配置)
+	3.MyBatis逆向工程
+	4.接口的实现类
+3.服务消费者:处理用户浏览器的请求,该工程集成Spring和SpringMVC
+	Spring相关依赖,Dubbo依赖,注册中心zookeeper依赖
+	1.添加依赖
+	2.配置核心配置文件(dubbo配置,配置视图解析器)
+	3.编写控制层处理用户的请求
